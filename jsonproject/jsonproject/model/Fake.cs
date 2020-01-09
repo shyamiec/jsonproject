@@ -6,6 +6,7 @@ namespace jsonproject.model
 {
     class Fake
     {
-        public int i { get; set; }
+        private int i { get; set; }
+        private int j { get; set; }
     }
 }
