@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ci="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             mc:Ignorable="d"
+             x:Class="jsonproject.MainPage">
+    <ContentPage.Content>
+
+
+        <StackLayout Orientation="Horizontal">
+            <StackLayout>
+                <ListView x:Name="myList" SeparatorColor="Accent" SelectionMode="Single" ItemSelected="myList_ItemSelected"
+                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0.5, Property=Width}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <ci:CircleImage Source="https://png.pngtree.com/png-clipart/20190516/original/pngtree-users-vector-icon-png-image_3725294.jpg" Grid.Column="0"/>
+                                    <Label Text="{Binding Name}" TextColor="Black" Grid.Column="1"/>
+                                </Grid>
+                            </ViewCell> 
+                        </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                
+            </StackLayout>
+            <StackLayout Orientation="Vertical" BackgroundColor="MintCream" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,
+                ElementName=myList ,Factor=1, Property=Width ,Constant=0}">
+
+                <Label x:Name="name" TextColor="Aqua" Margin="0,20"/>
+                <Label x:Name="sdetail" TextColor="Aqua" Margin="0,30"/>
+                <Label x:Name="ldetail" TextColor="Aqua" Margin="0,40"/>
+                <Button Text="Next" Clicked="Button_Clicked" Margin="0,100"/>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:jsonproject"
+             mc:Ignorable="d"
+             x:Class="jsonproject.EntryPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:StringToIntConverter x:Key="StringtoInt"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="0,10,0,0">
+        <local:CustomEntry x:Name="MyEntry" isEnable="True" CornerRadius="18" HorizontalTextAlignment="Center"  />
+
+        <Label Text="{Binding Source={x:Reference MyEntry},Path=Text,Converter={StaticResource StringtoInt}}" TextColor="Black"/>
+
+    </StackLayout>
+</ContentPage>
