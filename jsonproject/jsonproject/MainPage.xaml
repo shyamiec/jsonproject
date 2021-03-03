@@ -11,7 +11,7 @@
 
         <StackLayout Orientation="Horizontal">
             <StackLayout>
-                <ListView x:Name="myList" SeparatorColor="Accent" SelectionMode="Single" ItemSelected="myList_ItemSelected"
+                <ListView x:Name="myList" SeparatorColor="Yellow" SelectionMode="Single" ItemSelected="myList_ItemSelected"
                           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0.5, Property=Width}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
@@ -22,7 +22,7 @@
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
                                     <ci:CircleImage Source="https://png.pngtree.com/png-clipart/20190516/original/pngtree-users-vector-icon-png-image_3725294.jpg" Grid.Column="0"/>
-                                    <Label Text="{Binding Name}" TextColor="Black" Grid.Column="1"/>
+                                    <Label Text="{Binding Name}" TextColor="Blue" Grid.Column="1"/>
                                 </Grid>
                             </ViewCell> 
                         </DataTemplate>
