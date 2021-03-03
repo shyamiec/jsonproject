@@ -6,6 +6,8 @@
              mc:Ignorable="d"
              x:Class="jsonproject.App">
     <Application.Resources>
-
+        <Style TargetType="BoxView" BaseResourceKey="demo">
+            <Setter Property="Color" Value="AliceBlue"/>
+        </Style>
     </Application.Resources>
 </Application>
