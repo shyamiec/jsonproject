@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              x:Class="jsonproject.MainPage">
     <ContentPage.Content>
-
+<!--temp-->
 
         <StackLayout Orientation="Horizontal">
             <StackLayout>
