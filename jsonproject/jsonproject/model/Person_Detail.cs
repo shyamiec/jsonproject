@@ -8,7 +8,7 @@ namespace jsonproject.model
 {
     class Person_Detail
     {
-        [Description("Peron Name")]
+        [Description("Name of Employee")]
         public string Name { get; set; }
         public string Sdetail { get; set; }
         public string Ldetail { get; set; }
