@@ -4,9 +4,12 @@ using System.Text;
 
 namespace jsonproject.model
 {
-    class Fake
+    public class Fake
     {
-        private int i { get; set; }
-        private int j { get; set; }
+        private int fake_id;
+        private int fake_pass;
+
+        public int Fake_id { get => fake_id; set => fake_id = value; }
+        public int Fake_pass { get => fake_pass; set => fake_pass = value; }
     }
 }
